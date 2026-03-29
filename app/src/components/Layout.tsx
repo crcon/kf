@@ -46,7 +46,7 @@ export function Layout({ children, activeTab, onTabChange }: LayoutProps) {
             sidebarOpen ? "opacity-100" : "opacity-0 w-0 overflow-hidden"
           )}>
             <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-teal-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">ES</span>
+              <span className="text-white font-bold text-xs leading-none">易储</span>
             </div>
             <span className="font-semibold text-slate-800 text-sm">易储数能开发平台</span>
           </div>
