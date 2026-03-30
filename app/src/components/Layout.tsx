@@ -49,7 +49,7 @@ export function Layout({ children, activeTab, onTabChange }: LayoutProps) {
         onClick={() => onTabChange(item.id)}
         className={cn(
           mobile
-            ? 'flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium whitespace-nowrap transition-all'
+            ? 'flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium whitespace-nowrap transition-all'
             : 'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg mb-1 transition-all',
           isActive
             ? mobile
@@ -80,18 +80,12 @@ export function Layout({ children, activeTab, onTabChange }: LayoutProps) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex flex-col">
         <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
-          <div className="flex items-center gap-3 px-4 py-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl flex items-center justify-center shadow-sm">
-              <span className="text-white font-bold text-xs leading-none">易储</span>
-            </div>
-            <div className="min-w-0">
-              <div className="truncate text-base font-semibold text-slate-900">易储数能开发平台</div>
-              <div className="text-xs text-slate-500">移动端快捷导航</div>
-            </div>
+          <div className="px-4 py-3">
+            <div className="text-base font-semibold text-slate-900">易储数能开发平台</div>
           </div>
 
-          <nav className="px-3 pb-3">
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+          <nav className="overflow-x-auto px-4 pb-3">
+            <div className="flex min-w-max gap-2">
               {navItems.map((item) => renderNavButton(item, true))}
             </div>
           </nav>
